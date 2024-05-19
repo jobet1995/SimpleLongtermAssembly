@@ -55,6 +55,6 @@ def doLogin(request):
     return render(request, 'home.html')
 
 
-def logout(request):
-    logout(request)
+def logoutUser(request):
+    logoutUser(request)
     return HttpResponseRedirect('/')

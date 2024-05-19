@@ -36,8 +36,8 @@ def doLogin(request):
     if not (username and password):
         messages.error(request, "Username and Password don't match")
         return render(request, 'login.html')
-    user = CustomUser.objects.filter(
-        username=username, password=password).last()
+    user = CustomUser.objects.filter(username=username,
+                                     password=password).last()
     if not user:
         messages.error(request, 'Invalid Login Credentials')
         return render(request, 'login.html')

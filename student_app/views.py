@@ -9,7 +9,7 @@ Ver     Author              Date            Log
 """
 from django.shortcuts import render, HttpResponse, redirect, HttpResponseRedirect
 from django.contrib.auth import logout, authenticate, login
-from .models import CustomUser, Staffs, Students, AdminHOD
+from .models import CustomUser, Staff, Students, AdminHOD
 from django.contrib import messages
 
 

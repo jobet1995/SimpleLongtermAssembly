@@ -14,6 +14,9 @@ from django.dispatch import receiver
 
 
 class SessionYearModel(models.Model):
+    """
+    Class contains model for school session year
+    """
     id = models.AutoField(primary_key=True)
     session_start_year = models.DateField()
     session_end_year = models.DateField()
@@ -21,6 +24,9 @@ class SessionYearModel(models.Model):
 
 
 class CustomUser(AbstractUser):
+    """
+    Class for Customer User identifies the Account base on their user_type
+    """
     HOD = '1'
     STAFF = '2'
     STUDENT = '3'
@@ -37,6 +43,9 @@ class CustomUser(AbstractUser):
 
 
 class Staff(models.Model):
+    """
+    Class Model for Staff Information
+    """
     id = models.AutoField(primary_key=True)
     admin = models.OneToOneField(CustomUser, on_delete=models.CASCADE)
     address = models.TextField()
@@ -46,6 +55,9 @@ class Staff(models.Model):
 
 
 class Subjects(models.Model):
+    """
+    Class Model for Subjects
+    """
     id = models.AutoField(primary_key=True)
     subject_name = models.CharField(max_length=255)
     course_id = models.ForeignKey(Courses, on_delete=models.CASCADE, default=1)

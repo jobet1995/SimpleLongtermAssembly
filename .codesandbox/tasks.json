@@ -8,5 +8,8 @@
   ],
 
   // These tasks can be run from CodeSandbox. Running one will open a log in the app.
-  "tasks": {}
+  "tasks": {
+    "command": "python -m manage runserver",
+    "name": "python -m manage runserver"
+  }
 }
